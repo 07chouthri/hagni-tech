@@ -93,9 +93,9 @@ const Contact = () => {
                   <h3 className="font-bold text-base mb-5">Contact Details</h3>
                   <div className="space-y-5">
                     {[
-                      { icon: MapPin, content: <p>Office Address Placeholder, City, Country</p> },
-                      { icon: Mail, content: <div className="space-y-1"><p>hello@hagni.in</p><p>partners@hagni.in</p><p>support@hagni.in</p></div> },
-                      { icon: Phone, content: <p>+91 XXXXX XXXXX</p> },
+                      { icon: MapPin, content: <p>Chennai, Guindy</p> },
+                      { icon: Mail, content: <div className="space-y-1"><p>hagnitechnologies2026@gmail.com</p></div> },
+                      { icon: Phone, content: <p>+91 89256 47123</p> },
                       { icon: Clock, content: <div><p>Monday to Friday</p><p>9 AM to 6 PM IST</p></div> },
                     ].map(({ icon: Icon, content }, i) => (
                       <div key={i} className="flex gap-3 items-start">
