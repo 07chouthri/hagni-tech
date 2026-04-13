@@ -14,6 +14,7 @@ import {
   Shield, BarChart3, Smartphone, Users, GraduationCap, Heart,
   Coffee, Laptop, Globe, Send, Building2, BookOpen, ExternalLink
 } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const openPositions = [
   { title: "Senior Full-Stack Developer", department: "Engineering", location: "Bangalore, India", type: "Full-Time", experience: "4-7 years", icon: Code, skills: ["React", "Node.js", "TypeScript", "PostgreSQL"] },
@@ -21,7 +22,7 @@ const openPositions = [
   { title: "Mobile App Developer", department: "Engineering", location: "Hyderabad, India", type: "Full-Time", experience: "3-5 years", icon: Smartphone, skills: ["React Native", "Flutter", "Firebase", "REST APIs"] },
   { title: "DevOps Engineer", department: "Cloud & DevOps", location: "Remote", type: "Full-Time", experience: "3-6 years", icon: Shield, skills: ["Docker", "Jenkins", "AWS", "Linux"] },
   { title: "UI/UX Designer", department: "Design", location: "Bangalore, India", type: "Full-Time", experience: "2-5 years", icon: BarChart3, skills: ["Figma", "Adobe XD", "Prototyping", "Design Systems"] },
-  { title: "Technical Trainer", department: "Teaching", location: "Hybrid", type: "Full-Time", experience: "3-6 years", icon: GraduationCap, skills: ["Java/Python", "Curriculum Design", "Public Speaking"] },
+  { title: "Technical Trainer", department: "Hagni's Ignite Program", location: "Hybrid", type: "Full-Time", experience: "3-6 years", icon: GraduationCap, skills: ["Java/Python", "Curriculum Design", "Public Speaking"] },
 ];
 
 const perks = [
@@ -84,40 +85,6 @@ const PerksSection = () => (
   </section>
 );
 
-/* ─── BLOG REFERENCE ─── */
-const BlogSection = () => (
-  <section className="py-16 lg:py-20 bg-background">
-    <div className="container mx-auto px-4 lg:px-8">
-      <AnimatedSection className="text-center">
-        <span className="section-label">Blog & Insights</span>
-        <h2 className="section-title mb-4">Stay Updated with Our Blog</h2>
-        <p className="section-subtitle mb-8">Read insights, tutorials, and industry updates from our team. Curated by Sakthi.</p>
-        <div className="card-professional p-8 max-w-2xl mx-auto">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-14 h-14 rounded-full gradient-flame flex items-center justify-center text-accent-foreground font-bold text-lg">S</div>
-            <div className="text-left">
-              <h3 className="font-bold text-base">Sakthi</h3>
-              <p className="text-xs text-muted-foreground">Blog Editor & Content Lead</p>
-            </div>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-            Our blog covers the latest in technology, cloud computing, AI, digital marketing, and career development. Stay ahead with expert insights and practical guides from the Hagni Technologies team.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Button className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-11 px-6 text-sm">
-              <BookOpen size={14} /> Visit Blog
-            </Button>
-            <Link to="/contact">
-              <Button variant="outline" className="gap-2 h-11 px-6 text-sm font-semibold">
-                Contact Sakthi <ExternalLink size={14} />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </AnimatedSection>
-    </div>
-  </section>
-);
 
 /* ─── OPEN POSITIONS ─── */
 const OpenPositions = () => {
@@ -275,10 +242,16 @@ const ApplicationForm = () => {
 /* ─── PAGE ─── */
 const Careers = () => (
   <div className="min-h-screen">
+      <SEOHead
+      title="Careers at Hagni Technologies — Join Our Team"
+      description="Explore exciting career opportunities at Hagni Technologies. Join our team of innovators building cutting-edge web, mobile, cloud, and AI solutions."
+      keywords="Hagni Technologies careers, tech jobs, software developer jobs, cloud engineer jobs, digital marketing jobs"
+      canonical="https://hagnitechnologies.com/careers"
+      jsonLd={{ "@context": "https://schema.org", "@type": "JobPosting", hiringOrganization: { "@type": "Organization", name: "Hagni Technologies" } }}
+    />
     <Navbar />
     <HeroSection />
     <PerksSection />
-    <BlogSection />
     <OpenPositions />
     <ApplicationForm />
     <Footer />

@@ -30,6 +30,7 @@ import courseItTraining from "@/assets/course-it-training.jpg";
 import courseAwsTraining from "@/assets/course-aws-training.jpg";
 import courseDmarketing from "@/assets/course-dmarketing.jpg";
 import courseLeadership from "@/assets/course-leadership.jpg";
+import SEOHead from "@/components/SEOHead";
 
 /* ═══════════════════════════════════════════════════
    COURSE DATA FOR TEACHING
@@ -290,7 +291,7 @@ const serviceCategories = [
   {
     id: "teaching",
     icon: BookOpen,
-    label: "Teaching",
+    label: "Hagni's Ignite Program",
     title: "Hagni Ignite Learning's — Professional Training",
     tagline: "Build job-ready talent across your organization.",
     image: learningPlatform,
@@ -639,7 +640,7 @@ const ServiceDetail = ({ service }: { service: typeof serviceCategories[0] }) =>
         </div>
       </div>
 
-      {/* Course Catalog (Teaching only) */}
+      {/* Course Catalog (Hagni's Ignite Program only) */}
       {(service as any).hasCourses && <CourseCatalog />}
     </motion.div>
   </AnimatePresence>
@@ -718,6 +719,13 @@ const CTASection = () => (
    ═══════════════════════════════════════════════════ */
 const Services = () => (
   <div className="min-h-screen">
+     <SEOHead
+      title="Services — Web, Mobile, Cloud, AI, Digital Marketing & Training | Hagni Technologies"
+      description="Explore Hagni Technologies' full range of services: Web & Mobile Development, Cloud & DevOps, Digital Marketing, AI Solutions, and Professional Training courses."
+      keywords="web development services, mobile app development, cloud devops services, digital marketing agency, AI solutions, IT training courses, Hagni Technologies services"
+      canonical="https://hagnitechnologies.com/services"
+      jsonLd={{ "@context": "https://schema.org", "@type": "Service", provider: { "@type": "Organization", name: "Hagni Technologies" }, name: "Technology Services", description: "Full-stack digital services." }}
+    />
     <Navbar />
     <HeroSection />
     <ServicesTabSection />

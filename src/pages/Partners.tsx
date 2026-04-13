@@ -3,12 +3,32 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import AnimatedSection from "@/components/AnimatedSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ArrowRight, Cloud, Shield, BarChart3, Settings, Handshake, Megaphone, Users, GraduationCap, Quote, Send, CheckCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Cloud,
+  Shield,
+  BarChart3,
+  Settings,
+  Handshake,
+  Megaphone,
+  Users,
+  GraduationCap,
+  Quote,
+  Send,
+  CheckCircle,
+} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEOHead from "@/components/SEOHead";
 
 const techPartners = [
   { icon: Cloud, label: "Cloud Provider Partner" },
@@ -41,22 +61,45 @@ const partnerTypes = [
 ];
 
 const partnerTestimonials = [
-  { text: "Partnering with Hagni Technologies allowed us to expand our service offerings and deliver more value to our mutual clients.", name: "Partner A", role: "Director, Consulting Firm" },
-  { text: "The collaboration has been seamless. Their technical depth complements our business strategy perfectly.", name: "Partner B", role: "CEO, Marketing Agency" },
+  {
+    text: "Partnering with Hagni Technologies allowed us to expand our service offerings and deliver more value to our mutual clients.",
+    name: "Partner A",
+    role: "Director, Consulting Firm",
+  },
+  {
+    text: "The collaboration has been seamless. Their technical depth complements our business strategy perfectly.",
+    name: "Partner B",
+    role: "CEO, Marketing Agency",
+  },
 ];
 
 const Partners = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", company: "", type: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    type: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Partnership Enquiry Submitted", description: "Our partnerships team will reach out soon." });
+    toast({
+      title: "Partnership Enquiry Submitted",
+      description: "Our partnerships team will reach out soon.",
+    });
     setForm({ name: "", email: "", company: "", type: "", message: "" });
   };
 
   return (
     <>
+      <SEOHead
+        title="Partner With Hagni Technologies — Strategic Alliances"
+        description="Partner with Hagni Technologies to deliver world-class digital solutions. Explore technology, referral, and strategic partnership opportunities."
+        keywords="Hagni Technologies partners, technology partnerships, IT partnerships, strategic alliances"
+        canonical="https://hagnitechnologies.com/partners"
+      />
       <Navbar />
       <main>
         {/* Hero */}
@@ -65,10 +108,12 @@ const Partners = () => {
             <AnimatedSection>
               <span className="section-label">Partnerships</span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-hero-foreground mb-4 tracking-tight">
-                Partners & <span className="gradient-flame-text">Collaborators</span>
+                Partners &{" "}
+                <span className="gradient-flame-text">Collaborators</span>
               </h1>
               <p className="text-hero-foreground/50 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-                At Hagni Technologies, we believe the strongest digital solutions are built through strong partnerships.
+                At Hagni Technologies, we believe the strongest digital
+                solutions are built through strong partnerships.
               </p>
             </AnimatedSection>
           </div>
@@ -124,9 +169,12 @@ const Partners = () => {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <AnimatedSection>
                 <span className="section-label">Join Us</span>
-                <h2 className="section-title mb-6">Partner With Hagni Technologies</h2>
+                <h2 className="section-title mb-6">
+                  Partner With Hagni Technologies
+                </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 text-[0.95rem]">
-                  Join our growing partner ecosystem and unlock new business opportunities through collaboration.
+                  Join our growing partner ecosystem and unlock new business
+                  opportunities through collaboration.
                 </p>
                 <ul className="space-y-3">
                   {benefits.map((b, i) => (
@@ -142,20 +190,68 @@ const Partners = () => {
 
               <AnimatedSection delay={0.2}>
                 <div className="card-professional p-8 lg:p-10">
-                  <h3 className="text-lg font-bold mb-1">Partnership Enquiry</h3>
-                  <p className="text-sm text-muted-foreground mb-6">Tell us about your partnership interest.</p>
+                  <h3 className="text-lg font-bold mb-1">
+                    Partnership Enquiry
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Tell us about your partnership interest.
+                  </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <Input placeholder="Full Name *" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="h-11" />
-                    <Input type="email" placeholder="Business Email *" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="h-11" />
-                    <Input placeholder="Company Name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} className="h-11" />
-                    <Select value={form.type} onValueChange={(v) => setForm({ ...form, type: v })}>
-                      <SelectTrigger className="h-11"><SelectValue placeholder="Partnership Type" /></SelectTrigger>
+                    <Input
+                      placeholder="Full Name *"
+                      required
+                      value={form.name}
+                      onChange={(e) =>
+                        setForm({ ...form, name: e.target.value })
+                      }
+                      className="h-11"
+                    />
+                    <Input
+                      type="email"
+                      placeholder="Business Email *"
+                      required
+                      value={form.email}
+                      onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                      }
+                      className="h-11"
+                    />
+                    <Input
+                      placeholder="Company Name"
+                      value={form.company}
+                      onChange={(e) =>
+                        setForm({ ...form, company: e.target.value })
+                      }
+                      className="h-11"
+                    />
+                    <Select
+                      value={form.type}
+                      onValueChange={(v) => setForm({ ...form, type: v })}
+                    >
+                      <SelectTrigger className="h-11">
+                        <SelectValue placeholder="Partnership Type" />
+                      </SelectTrigger>
                       <SelectContent>
-                        {partnerTypes.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
+                        {partnerTypes.map((t) => (
+                          <SelectItem key={t} value={t}>
+                            {t}
+                          </SelectItem>
+                        ))}
                       </SelectContent>
                     </Select>
-                    <Textarea placeholder="Tell us about the partnership opportunity" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
-                    <Button type="submit" size="lg" className="w-full gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-12 shadow-md shadow-accent/20">
+                    <Textarea
+                      placeholder="Tell us about the partnership opportunity"
+                      rows={4}
+                      value={form.message}
+                      onChange={(e) =>
+                        setForm({ ...form, message: e.target.value })
+                      }
+                    />
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-12 shadow-md shadow-accent/20"
+                    >
                       Submit Partnership Enquiry <Send size={16} />
                     </Button>
                   </form>
@@ -165,45 +261,36 @@ const Partners = () => {
           </div>
         </section>
 
-        {/* Partner Testimonials */}
-        <section className="py-20 bg-secondary/60">
-          <div className="container mx-auto px-4 lg:px-8">
-            <AnimatedSection className="text-center mb-14">
-              <span className="section-label">Feedback</span>
-              <h2 className="section-title">What Our Partners Say</h2>
-            </AnimatedSection>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {partnerTestimonials.map((t, i) => (
-                <AnimatedSection key={i} delay={i * 0.12}>
-                  <div className="card-professional p-8">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
-                      <Quote size={18} className="text-accent" />
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed italic mb-6">"{t.text}"</p>
-                    <p className="font-bold text-sm">{t.name}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Final CTA */}
         <section className="py-20 lg:py-28 section-dark dot-pattern-dark relative overflow-hidden">
-          <div className="absolute inset-0 opacity-15" style={{ background: "radial-gradient(ellipse at 50% 100%, hsl(28,95%,52%) 0%, transparent 60%)" }} />
+          <div
+            className="absolute inset-0 opacity-15"
+            style={{
+              background:
+                "radial-gradient(ellipse at 50% 100%, hsl(28,95%,52%) 0%, transparent 60%)",
+            }}
+          />
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <AnimatedSection>
               <span className="section-label">Collaborate</span>
-              <h2 className="section-title text-hero-foreground mb-6">Let's Build Something Powerful Together</h2>
+              <h2 className="section-title text-hero-foreground mb-6">
+                Let's Build Something Powerful Together
+              </h2>
               <div className="flex flex-wrap justify-center gap-4">
                 <a href="#partner-form">
-                  <Button size="lg" className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-12 px-7 text-sm shadow-lg shadow-accent/20">
+                  <Button
+                    size="lg"
+                    className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-12 px-7 text-sm shadow-lg shadow-accent/20"
+                  >
                     Submit Partnership Enquiry <ArrowRight size={16} />
                   </Button>
                 </a>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-hero-foreground/20 text-hero-foreground bg-transparent hover:bg-hero-foreground/5 h-12 px-7 text-sm">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-hero-foreground/20 text-hero-foreground bg-transparent hover:bg-hero-foreground/5 h-12 px-7 text-sm"
+                  >
                     Contact Our Team
                   </Button>
                 </Link>

@@ -9,7 +9,7 @@ const serviceItems = [
   { icon: Cloud, label: "Cloud & DevOps", desc: "Modern infrastructure & automation", path: "/services#cloud-devops" },
   { icon: Megaphone, label: "Digital Marketing", desc: "Growth-driven marketing strategies", path: "/services#digital-marketing" },
   { icon: Bot, label: "AI Solutions", desc: "Intelligent automation & analytics", path: "/services#ai-solutions" },
-  { icon: BookOpen, label: "Teaching", desc: "Professional training programs", path: "/services#teaching" },
+  { icon: BookOpen, label: "Hagni's Ignite Program", desc: "Professional training programs", path: "/services#teaching" },
 ];
 
 const navLinks = [

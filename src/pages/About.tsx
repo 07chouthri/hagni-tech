@@ -15,6 +15,7 @@ import teamMeeting from "@/assets/team-meeting.jpg";
 import webMobileDev from "@/assets/web-mobile-dev.jpg";
 import cloudInfra from "@/assets/cloud-infrastructure.jpg";
 import learningPlatform from "@/assets/learning-platform.jpg";
+import SEOHead from "@/components/SEOHead";
 
 /* ─── HERO ─── */
 const HeroSection = () => (
@@ -35,18 +36,18 @@ const HeroSection = () => (
             <span className="text-xs font-medium text-hero-foreground/70 tracking-wide">About Hagni Technologies</span>
           </motion.div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] tracking-tight text-hero-foreground mb-6">
-            Building the Future of{" "}
+            Your Trusted{" "}
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="gradient-flame-text inline-block"
             >
-              Enterprise Technology
+              Digital Transformation Partner
             </motion.span>
           </h1>
           <p className="text-base md:text-lg text-hero-foreground/60 leading-relaxed max-w-xl">
-            We are a full-service digital engineering company committed to delivering high-impact technology solutions for enterprises that demand performance, reliability, and scale.
+            We are a full-service digital engineering company helping businesses build a strong digital presence and equipping individuals with future-ready skills — combining technology, creativity, and strategy to deliver measurable results.
           </p>
         </AnimatedSection>
         <AnimatedSection delay={0.3} variant="fadeRight" className="hidden lg:block">
@@ -64,9 +65,21 @@ const HeroSection = () => (
 
 /* ─── MISSION / VISION / VALUES ─── */
 const missionCards = [
-  { icon: Target, title: "Our Mission", text: "To empower enterprises with technology solutions that are engineered for performance, built for scale, and designed to create lasting business impact." },
-  { icon: Eye, title: "Our Vision", text: "To become the most trusted technology partner for mid-size and enterprise businesses navigating digital transformation across the globe." },
-  { icon: Heart, title: "Our Values", text: "Integrity in every line of code. Transparency at every milestone. Excellence as a standard, not an exception. Partnership beyond delivery." },
+  {
+    icon: Target,
+    title: "Our Mission",
+    text: "To innovate, empower, and elevate businesses and careers through technology and knowledge — delivering solutions that create real, lasting impact.",
+  },
+  {
+    icon: Eye,
+    title: "Our Vision",
+    text: "To become a trusted global leader in technology, driving digital growth for enterprises and shaping future-ready talent across industries.",
+  },
+  {
+    icon: Heart,
+    title: "Our Values",
+    text: "Delivering innovative and reliable technology solutions. Building long-term client partnerships. Empowering talent through industry-relevant training. Driving digital transformation across industries.",
+  },
 ];
 
 const MissionVisionSection = () => (
@@ -104,8 +117,8 @@ const StorySection = () => (
           <h2 className="section-title mb-6">From Vision to Reality</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
             <p>Hagni Technologies was founded with a simple yet powerful belief — that every business deserves access to world-class technology, not just the ones with unlimited budgets.</p>
-            <p>We started as a small team of passionate engineers and grew into a full-service digital engineering company serving enterprises across industries.</p>
-            <p>Today, we partner with mid-size and enterprise businesses to build scalable applications, modernize cloud infrastructure, and develop internal talent through our Hagni Ignite Learning's programs — all under one roof.</p>
+            <p>We started as a small team of passionate engineers and grew into a full-service digital engineering company serving enterprises across industries — spanning Digital Marketing, Website Development, Web & Mobile Application Development, Cloud Solutions, and DevOps Services.</p>
+            <p>What sets us apart is our dual focus on technology services and skill development. Through our flagship initiative, Hagni's Ignite Program, we bridge the gap between education and industry by offering career-focused courses and professional skill development — all under one roof.</p>
           </div>
           <div className="flex flex-wrap gap-3 mt-8">
             <Link to="/services">
@@ -147,11 +160,11 @@ const TeachingSection = () => (
           <ParallaxImage src={learningPlatform} alt="Hagni Ignite Learning programs" className="rounded-2xl border border-border/60 shadow-xl aspect-[4/3]" />
         </AnimatedSection>
         <AnimatedSection variant="fadeLeft">
-          <span className="section-label">Teaching & Training</span>
-          <h2 className="section-title mb-6">Hagni Ignite Learning's Programs</h2>
+          <span className="section-label">Hagni's Ignite Program & Training</span>
+          <h2 className="section-title mb-6">Hagni's Ignite Program</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
-            <p>Our Hagni Ignite Learning's division provides industry-aligned professional training programs designed to bridge skill gaps and build future-ready talent across your organization.</p>
-            <p>From full-stack development and cloud computing to digital marketing, AI/ML, and leadership — our programs combine instructor-led training with hands-on projects and industry-recognized certifications.</p>
+            <p>Our Ignite Program provides industry-aligned professional training designed to bridge skill gaps and build future-ready talent — combining instructor-led learning with hands-on projects and industry-recognized certifications.</p>
+            <p>From full-stack development and cloud computing to digital marketing, AI/ML, leadership, and sales — we prepare individuals to thrive in today's competitive job market.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 mt-6">
             {[
@@ -177,45 +190,88 @@ const TeachingSection = () => (
   </section>
 );
 
-/* ─── TIMELINE ─── */
+/* ─── TIMELINE / ROADMAP ─── */
 const timelineItems = [
-  { year: "2020", title: "The Beginning", desc: "Hagni Technologies founded with a mission to bridge the gap between enterprise technology needs and accessible solutions." },
-  { year: "2021", title: "First Enterprise Client", desc: "Secured our first major enterprise project — delivering a full-scale web platform." },
-  { year: "2022", title: "Cloud & DevOps Expansion", desc: "Expanded to include cloud migration, DevOps consulting, and infrastructure management." },
-  { year: "2023", title: "Hagni Ignite Learning's Launched", desc: "Launched talent development to build job-ready technical skills across workforces." },
-  { year: "2024", title: "Strategic Partnerships", desc: "Formed key technology partnerships to expand market reach." },
-  { year: "2025", title: "Scaling New Heights", desc: "Grew to 40+ professionals serving clients across multiple countries." },
+  {
+    year: "2020",
+    title: "Founded with Purpose",
+    desc: "Hagni Technologies was established with a clear mission — to innovate, empower, and elevate businesses and careers through technology and knowledge.",
+    icon: Rocket,
+  },
+  {
+    year: "2021",
+    title: "Core Services Launched",
+    desc: "Rolled out our flagship services: Digital Marketing, Website Development, and Web & Mobile Application Development for startups and growing businesses.",
+    icon: Code,
+  },
+  {
+    year: "2022",
+    title: "Cloud & DevOps Practice",
+    desc: "Expanded our offering to include Cloud Solutions, DevOps Services, and AI & Automation Testing — becoming a true end-to-end technology partner.",
+    icon: Cloud,
+  },
+  {
+    year: "2023",
+    title: "Hagni Ignite Program Launched",
+    desc: "Introduced our flagship talent initiative offering career-focused courses in Full-Stack Development, Cloud, Digital Marketing, AI, and professional skill tracks.",
+    icon: BookOpen,
+  },
+  {
+    year: "2024",
+    title: "Skill Development Expansion",
+    desc: "Broadened the Ignite Program to include HR, Leadership, Sales, and Business Development courses — bridging the gap between education and industry at scale.",
+    icon: Users,
+  },
+  {
+    year: "2025",
+    title: "Global Growth & Impact",
+    desc: "Serving clients across multiple countries with 40+ professionals, partnering with enterprises to drive digital transformation and shape future-ready talent worldwide.",
+    icon: Globe,
+  },
 ];
 
 const TimelineSection = () => (
   <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
     <FloatingElements />
     <div className="container mx-auto px-4 lg:px-8 relative z-10">
-      <AnimatedSection className="text-center mb-14" variant="blur">
+      <AnimatedSection className="text-center mb-16" variant="blur">
         <span className="section-label">Our Journey</span>
-        <h2 className="section-title mb-4">Company Timeline</h2>
+        <h2 className="section-title mb-4">Company Roadmap</h2>
+        <p className="section-subtitle">From a bold idea to a global technology partner — here's how we got here.</p>
       </AnimatedSection>
-      <div className="relative max-w-3xl mx-auto">
-        <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent md:-translate-x-px" />
+
+      <div className="relative max-w-2xl mx-auto">
+        {/* Vertical connecting line */}
+        <div className="absolute left-[1.875rem] top-0 bottom-0 w-px bg-gradient-to-b from-accent/60 via-accent/30 to-transparent" />
+
         {timelineItems.map((item, i) => (
-          <AnimatedSection key={item.year} delay={i * 0.1} variant={i % 2 === 0 ? "fadeLeft" : "fadeRight"}>
-            <div className={`relative flex items-start gap-6 mb-10 last:mb-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-              <motion.div
-                whileInView={{ scale: [0, 1.2, 1] }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 + 0.2 }}
-                className="absolute left-6 md:left-1/2 w-3 h-3 rounded-full gradient-flame -translate-x-1.5 mt-2 z-10 ring-4 ring-background"
-              />
-              <div className={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"}`}>
-                <motion.div whileHover={{ y: -3 }} className="card-professional p-6">
-                  <div className="inline-flex items-center gap-2 mb-2">
-                    <Calendar size={14} className="text-accent" />
-                    <span className="text-xs font-bold text-accent tracking-wider">{item.year}</span>
+          <AnimatedSection key={item.year} delay={i * 0.1} variant="fadeLeft">
+            <div className="relative flex items-start gap-6 mb-8 last:mb-0">
+
+              {/* Icon node anchored on the line */}
+              <div className="relative shrink-0 flex flex-col items-center z-10">
+                <motion.div
+                  whileInView={{ scale: [0, 1.2, 1] }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 + 0.15 }}
+                  className="w-[3.75rem] flex flex-col items-center gap-1"
+                >
+                  <div className="w-10 h-10 rounded-full gradient-flame flex items-center justify-center shadow-md shadow-accent/25 ring-4 ring-background">
+                    <item.icon size={16} className="text-accent-foreground" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <span className="text-[10px] font-extrabold text-accent tracking-widest">{item.year}</span>
                 </motion.div>
               </div>
+
+              {/* Card */}
+              <motion.div
+                whileHover={{ y: -4, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="card-professional p-6 w-full mt-1"
+              >
+                <h3 className="text-base font-bold mb-1.5">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
             </div>
           </AnimatedSection>
         ))}
@@ -253,6 +309,13 @@ const CTASection = () => (
 /* ─── PAGE ─── */
 const About = () => (
   <div className="min-h-screen">
+      <SEOHead
+      title="About Hagni Technologies — Our Mission, Vision & Team"
+      description="Learn about Hagni Technologies' mission to accelerate digital transformation. Discover our values, team, and commitment to delivering world-class technology solutions."
+      keywords="about Hagni Technologies, digital transformation company, IT company, technology partner, software development team"
+      canonical="https://hagnitechnologies.com/about"
+      jsonLd={{ "@context": "https://schema.org", "@type": "AboutPage", name: "About Hagni Technologies", description: "Our mission, vision and values." }}
+    />
     <Navbar />
     <HeroSection />
     <MissionVisionSection />

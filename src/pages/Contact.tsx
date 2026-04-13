@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Twitter, Youtube, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEOHead from "@/components/SEOHead";
 
 const serviceOptions = [
   "Web & Mobile Application Development",
@@ -31,6 +32,13 @@ const Contact = () => {
 
   return (
     <>
+    <SEOHead
+        title="Contact Hagni Technologies — Get In Touch"
+        description="Contact Hagni Technologies for enterprise web, mobile, cloud, AI, and training solutions. Get a free consultation today."
+        keywords="contact Hagni Technologies, IT consulting, free consultation, software development inquiry"
+        canonical="https://hagnitechnologies.com/contact"
+        jsonLd={{ "@context": "https://schema.org", "@type": "ContactPage", name: "Contact Hagni Technologies" }}
+      />
       <Navbar />
       <main>
         {/* Hero */}

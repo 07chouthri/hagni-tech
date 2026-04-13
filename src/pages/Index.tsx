@@ -14,12 +14,13 @@ import Footer from "@/components/Footer";
 import FloatingElements from "@/components/FloatingElements";
 import ImageShowcase from "@/components/ImageShowcase";
 import ParallaxImage from "@/components/ParallaxImage";
-import heroTechTeam from "@/assets/hero-tech-team.jpg";
+import heroTechTeam from "@/assets/hero-visual.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
 import industriesVisual from "@/assets/industries-visual.jpg";
 import webMobileDev from "@/assets/web-mobile-dev.jpg";
 import cloudInfra from "@/assets/cloud-infrastructure.jpg";
 import learningPlatform from "@/assets/learning-platform.jpg";
+import SEOHead from "@/components/SEOHead";
 
 /* ─── Counter Hook ─── */
 function useCounter(end: number, duration = 2000, suffix = "") {
@@ -162,7 +163,7 @@ const WhoWeAreSection = () => (
               <Button variant="outline" className="gap-2 h-11 px-6 text-sm font-semibold">Learn More About Us <ArrowRight size={14} /></Button>
             </Link>
             <Link to="/services#teaching">
-              <Button className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-11 px-6 text-sm">Explore Teaching <BookOpen size={14} /></Button>
+              <Button className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-11 px-6 text-sm">Explore Hagni's Ignite Program <BookOpen size={14} /></Button>
             </Link>
           </div>
         </AnimatedSection>
@@ -202,7 +203,7 @@ const services = [
   { icon: Cloud, title: "Cloud & DevOps Services", desc: "We architect, migrate, and manage cloud infrastructure that reduces costs, improves uptime, and accelerates deployment.", image: cloudInfra, cta: "Explore Cloud & DevOps", path: "/services#cloud-devops" },
   { icon: Megaphone, title: "Digital Marketing", desc: "Data-driven digital marketing strategies including SEO, SEM, social media, and content marketing to grow your brand.", image: learningPlatform, cta: "Explore Digital Marketing", path: "/services#digital-marketing" },
   { icon: Bot, title: "AI Solutions", desc: "Intelligent automation, predictive analytics, NLP, and machine learning solutions that transform business operations.", image: heroTechTeam, cta: "Explore AI Solutions", path: "/services#ai-solutions" },
-  { icon: BookOpen, title: "Teaching & Training", desc: "Hagni Ignite Learning's professional training programs in development, cloud, marketing, AI, and leadership.", image: teamMeeting, cta: "Explore Teaching", path: "/services#teaching" },
+  { icon: BookOpen, title: "Hagni's Ignite Program & Training", desc: "Hagni Ignite Learning's professional training programs in development, cloud, marketing, AI, and leadership.", image: teamMeeting, cta: "Explore Hagni's Ignite Program", path: "/services#teaching" },
 ];
 
 const CoreServicesSection = () => (
@@ -260,7 +261,7 @@ const whyItems = [
   { icon: Cloud, title: "Cloud & DevOps", desc: "Modern cloud infrastructure, CI/CD, and container orchestration" },
   { icon: Megaphone, title: "Digital Marketing", desc: "SEO, SEM, social media, content marketing, and brand growth strategies" },
   { icon: Bot, title: "AI Solutions", desc: "Machine learning, NLP, predictive analytics, and intelligent automation" },
-  { icon: BookOpen, title: "Teaching & Training", desc: "Hagni Ignite Learning's programs for upskilling and professional development" },
+  { icon: BookOpen, title: "Hagni's Ignite Program & Training", desc: "Hagni Ignite Learning's programs for upskilling and professional development" },
 ];
 
 const WhyHagniSection = () => (
@@ -306,9 +307,9 @@ const WhyHagniSection = () => (
   </section>
 );
 
-/* ─────────────────── PROCESS (starts with Teaching) ─────────────────── */
+/* ─────────────────── PROCESS (starts with Hagni's Ignite Program) ─────────────────── */
 const steps = [
-  { title: "Teaching & Skill Assessment", desc: "We begin by understanding your team's current capabilities and training needs" },
+  { title: "Hagni's Ignite Program & Skill Assessment", desc: "We begin by understanding your team's current capabilities and training needs" },
   { title: "Discovery & Requirement Analysis", desc: "Deep dive into your business objectives and technical landscape" },
   { title: "Strategy & Architecture Planning", desc: "Blueprint the optimal solution architecture for your needs" },
   { title: "Design & Development", desc: "Craft and build using agile sprints with continuous feedback" },
@@ -526,7 +527,32 @@ const FinalCTASection = () => (
 
 /* ─────────────────── PAGE ─────────────────── */
 const Index = () => (
-  <>
+  <>  <SEOHead
+      title="Hagni Technologies — Digital Transformation Partner | Web, Mobile, Cloud, AI"
+      description="Hagni Technologies builds scalable web & mobile applications, modernizes cloud infrastructure, delivers AI solutions, digital marketing, and professional training for enterprises worldwide."
+      keywords="digital transformation, web development, mobile app development, cloud devops, AI solutions, digital marketing, IT training, enterprise software, Hagni Technologies"
+      canonical="https://hagnitechnologies.com/"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Hagni Technologies",
+        url: "https://hagnitechnologies.com",
+        description: "Enterprise-grade web, mobile, cloud, AI & training solutions.",
+        sameAs: [],
+        contactPoint: { "@type": "ContactPoint", contactType: "sales", availableLanguage: "English" },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Services",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web & Mobile Development" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud & DevOps" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Marketing" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Solutions" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teaching & Training" } },
+          ],
+        },
+      }}
+    />
     <Navbar />
     <main>
       <HeroSection />
