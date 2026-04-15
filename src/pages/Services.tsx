@@ -296,8 +296,8 @@ const serviceCategories = [
     tagline: "Build job-ready talent across your organization.",
     image: learningPlatform,
     bannerImage: teamMeeting,
-    description: "Hagni Ignite Learning's is our professional training division that provides industry-aligned programs designed to bridge skill gaps and build future-ready talent. From technical bootcamps to leadership development — we prepare your workforce for the future of technology and business.",
-    extendedDesc: "Our programs combine instructor-led training with hands-on projects, real-world case studies, and industry-recognized certifications. Whether you're upskilling existing teams or onboarding fresh talent — Hagni Ignite Learning's delivers measurable outcomes.",
+    description: "Hagni Ignite Learning's is our professional training division that provides industry-aligned programs designed to bridge skill gaps and build future-ready talent. From technical bootcamps to leadership development we prepare your workforce for the future of technology and business.",
+    extendedDesc: "Our programs combine instructor-led training with hands-on projects, real-world case studies, and industry-recognized certifications. Whether you're upskilling existing teams or onboarding fresh talent Hagni Ignite Learning's delivers measurable outcomes.",
     features: [
       { icon: Code, text: "Full-Stack Development Training", desc: "React, Node.js, Python, Java — intensive bootcamps with live projects" },
       { icon: Cloud, text: "Cloud & DevOps Training", desc: "AWS, Azure, GCP certification prep with hands-on lab exercises" },
@@ -342,7 +342,7 @@ const HeroSection = () => (
           </motion.span>
         </h1>
         <p className="text-base text-hero-foreground/60 max-w-2xl mx-auto leading-relaxed">
-          From custom software development to cloud infrastructure, digital marketing, AI, and professional training — all under one roof.
+          From custom software development to cloud infrastructure, digital marketing, AI, and professional training all under one roof.
         </p>
       </AnimatedSection>
     </div>

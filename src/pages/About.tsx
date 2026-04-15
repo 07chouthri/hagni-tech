@@ -47,7 +47,7 @@ const HeroSection = () => (
             </motion.span>
           </h1>
           <p className="text-base md:text-lg text-hero-foreground/60 leading-relaxed max-w-xl">
-            We are a full-service digital engineering company helping businesses build a strong digital presence and equipping individuals with future-ready skills — combining technology, creativity, and strategy to deliver measurable results.
+            We are a full-service digital engineering company helping businesses build a strong digital presence and equipping individuals with future ready skills combining technology, creativity, and strategy to deliver measurable results.
           </p>
         </AnimatedSection>
         <AnimatedSection delay={0.3} variant="fadeRight" className="hidden lg:block">
@@ -68,17 +68,17 @@ const missionCards = [
   {
     icon: Target,
     title: "Our Mission",
-    text: "To innovate, empower, and elevate businesses and careers through technology and knowledge — delivering solutions that create real, lasting impact.",
+    text: "To innovate, empower, and elevate businesses and careers through technology and knowledge.",
   },
   {
     icon: Eye,
     title: "Our Vision",
-    text: "To become a trusted global leader in technology, driving digital growth for enterprises and shaping future-ready talent across industries.",
+    text: "To become a trusted global leader in technology, driving digital growth and shaping future-ready talent",
   },
   {
     icon: Heart,
     title: "Our Values",
-    text: "Delivering innovative and reliable technology solutions. Building long-term client partnerships. Empowering talent through industry-relevant training. Driving digital transformation across industries.",
+    text: "Innovation, Integrity, and Excellence in every solution.Customer-first approach with transparency and trust.",
   },
 ];
 
@@ -116,9 +116,19 @@ const StorySection = () => (
           <span className="section-label">Our Story</span>
           <h2 className="section-title mb-6">From Vision to Reality</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
-            <p>Hagni Technologies was founded with a simple yet powerful belief — that every business deserves access to world-class technology, not just the ones with unlimited budgets.</p>
-            <p>We started as a small team of passionate engineers and grew into a full-service digital engineering company serving enterprises across industries — spanning Digital Marketing, Website Development, Web & Mobile Application Development, Cloud Solutions, and DevOps Services.</p>
-            <p>What sets us apart is our dual focus on technology services and skill development. Through our flagship initiative, Hagni's Ignite Program, we bridge the gap between education and industry by offering career-focused courses and professional skill development — all under one roof.</p>
+            <p>At Hagni Technologies, we believe in transforming ideas into powerful digital solutions
+that drive growth, innovation, and success. We are a technology company helping
+businesses build a strong digital presence and equipping individuals with future-ready
+skills.
+With expertise across Digital Marketing, Website Development, Mobile & Web
+Application Development, Cloud Solutions, and DevOps Services, we provide end-toend solutions tailored to meet the evolving needs of startups, enterprises, and growing
+businesses. Our approach combines creativity, technology, and strategy to deliver
+measurable results and scalable solutions.
+What sets us apart is our dual focus on technology services and skill development.
+Through our flagship initiative, Hagni’s Ignite Program, we bridge the gap between
+education and industry by offering career-focused and skill development courses. From
+cloud computing and programming to digital marketing and professional skills, we
+prepare individuals to thrive in today’s competitive job market.</p>
           </div>
           <div className="flex flex-wrap gap-3 mt-8">
             <Link to="/services">
@@ -163,8 +173,8 @@ const TeachingSection = () => (
           <span className="section-label">Hagni's Ignite Program & Training</span>
           <h2 className="section-title mb-6">Hagni's Ignite Program</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
-            <p>Our Ignite Program provides industry-aligned professional training designed to bridge skill gaps and build future-ready talent — combining instructor-led learning with hands-on projects and industry-recognized certifications.</p>
-            <p>From full-stack development and cloud computing to digital marketing, AI/ML, leadership, and sales — we prepare individuals to thrive in today's competitive job market.</p>
+            <p>Our Ignite Program provides industry-aligned professional training designed to bridge skill gaps and build future-ready talent combining instructor-led learning with hands-on projects and industry-recognized certifications.</p>
+            <p>From full-stack development and cloud computing to digital marketing, AI/ML, leadership, and sales we prepare individuals to thrive in today's competitive job market.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 mt-6">
             {[
@@ -195,7 +205,7 @@ const timelineItems = [
   {
     year: "2020",
     title: "Founded with Purpose",
-    desc: "Hagni Technologies was established with a clear mission — to innovate, empower, and elevate businesses and careers through technology and knowledge.",
+    desc: "Hagni Technologies was established with a clear mission to innovate, empower, and elevate businesses and careers through technology and knowledge.",
     icon: Rocket,
   },
   {
@@ -207,25 +217,25 @@ const timelineItems = [
   {
     year: "2022",
     title: "Cloud & DevOps Practice",
-    desc: "Expanded our offering to include Cloud Solutions, DevOps Services, and AI & Automation Testing — becoming a true end-to-end technology partner.",
+    desc: "Expanded our offering to include Cloud Solutions, DevOps Services, and AI & Automation Testing becoming a true end-to-end technology partner.",
     icon: Cloud,
   },
   {
     year: "2023",
     title: "Hagni Ignite Program Launched",
-    desc: "Introduced our flagship talent initiative offering career-focused courses in Full-Stack Development, Cloud, Digital Marketing, AI, and professional skill tracks.",
+    desc: "Introduced our flagship talent initiative offering career focused courses in Full-Stack Development, Cloud, Digital Marketing, AI, and professional skill tracks.",
     icon: BookOpen,
   },
   {
     year: "2024",
     title: "Skill Development Expansion",
-    desc: "Broadened the Ignite Program to include HR, Leadership, Sales, and Business Development courses — bridging the gap between education and industry at scale.",
+    desc: "Broadened the Ignite Program to include HR, Leadership, Sales, and Business Development courses bridging the gap between education and industry at scale.",
     icon: Users,
   },
   {
     year: "2025",
     title: "Global Growth & Impact",
-    desc: "Serving clients across multiple countries with 40+ professionals, partnering with enterprises to drive digital transformation and shape future-ready talent worldwide.",
+    desc: "Serving clients across multiple countries with 40+ professionals, partnering with enterprises to drive digital transformation and shape future ready talent worldwide.",
     icon: Globe,
   },
 ];
@@ -237,7 +247,7 @@ const TimelineSection = () => (
       <AnimatedSection className="text-center mb-16" variant="blur">
         <span className="section-label">Our Journey</span>
         <h2 className="section-title mb-4">Company Roadmap</h2>
-        <p className="section-subtitle">From a bold idea to a global technology partner — here's how we got here.</p>
+        <p className="section-subtitle">From a bold idea to a global technology partner here's how we got here.</p>
       </AnimatedSection>
 
       <div className="relative max-w-2xl mx-auto">

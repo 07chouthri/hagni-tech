@@ -50,7 +50,7 @@ const Contact = () => {
                 Let's Start a <span className="gradient-flame-text">Conversation</span>
               </h1>
               <p className="text-hero-foreground/50 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-                Whether you have a project in mind, a challenge to solve, or simply want to explore how we can support your business — our team is ready to listen.
+                Whether you have a project in mind, a challenge to solve, or simply want to explore how we can support your business our team is ready to listen.
               </p>
             </AnimatedSection>
           </div>
@@ -120,12 +120,12 @@ const Contact = () => {
                   <h3 className="font-bold text-base mb-5">Follow Us</h3>
                   <div className="flex gap-3">
                     {[
-                      { icon: Linkedin, label: "LinkedIn" },
-                      { icon: Instagram, label: "Instagram" },
-                      { icon: Twitter, label: "Twitter/X" },
-                      { icon: Youtube, label: "YouTube" },
-                    ].map(({ icon: Icon, label }) => (
-                      <a key={label} href="#" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-accent/10 transition-colors" aria-label={label}>
+                      { icon: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/company/hagnitechnologies/" },
+                      { icon: Instagram, label: "Instagram", url: "https://www.instagram.com/hagnitechnologies/" },
+                      { icon: Twitter, label: "Twitter/X", url: "https://x.com/Hagni_Tech" },
+                      { icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@hagnitechnologies" },
+                    ].map(({ icon: Icon, label, url }) => (
+                      <a key={label} href={url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-accent/10 transition-colors" aria-label={label}>
                         <Icon size={16} />
                       </a>
                     ))}

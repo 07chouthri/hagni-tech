@@ -85,7 +85,7 @@ const HeroSection = () => (
               transition={{ delay: 0.7, duration: 0.6 }}
               className="text-base md:text-lg text-hero-foreground/60 mb-10 leading-relaxed max-w-xl"
             >
-              Hagni Technologies partners with mid-size and enterprise businesses to build scalable web & mobile applications, modernize cloud infrastructure, and accelerate digital transformation — end to end.
+              Hagni Technologies partners with mid-size and enterprise businesses to build scalable web & mobile applications, modernize cloud infrastructure,digital marketing,hagni's ignite program and accelerate digital transformation end to end.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -155,8 +155,8 @@ const WhoWeAreSection = () => (
           <h2 className="section-title mb-6">We Build Technology That Works for Your Business</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-[0.95rem]">
             <p>At Hagni Technologies, we are a full-service digital engineering company committed to delivering high-impact technology solutions for enterprises that demand performance, reliability, and scale.</p>
-            <p>From custom software development to cloud infrastructure, digital marketing, AI solutions, and professional teaching programs — we bring the expertise, process, and precision your business needs to stay ahead in a rapidly evolving digital landscape.</p>
-            <p>Our Hagni Ignite Learning's programs empower teams with industry-aligned training in development, cloud computing, digital marketing, AI/ML, and leadership — building the future-ready workforce your organization needs.</p>
+            <p>From custom software development to cloud infrastructure, digital marketing, AI solutions, and professional teaching programs we bring the expertise, process, and precision your business needs to stay ahead in a rapidly evolving digital landscape.</p>
+            <p>Our Hagni Ignite Learning's programs empower teams with industry-aligned training in development, cloud computing, digital marketing, AI/ML, and leadership building the future-ready workforce your organization needs.</p>
           </div>
           <div className="flex flex-wrap gap-3 mt-8">
             <Link to="/about">
@@ -212,7 +212,7 @@ const CoreServicesSection = () => (
       <AnimatedSection className="text-center mb-16" variant="blur">
         <span className="section-label">What We Do</span>
         <h2 className="section-title mb-4">Our Core Services</h2>
-        <p className="section-subtitle">Everything your enterprise needs to build, scale, and succeed — under one roof.</p>
+        <p className="section-subtitle">Everything your enterprise needs to build, scale, and succeed under one roof.</p>
       </AnimatedSection>
       <motion.div
         variants={staggerContainer}
@@ -309,8 +309,9 @@ const WhyHagniSection = () => (
 
 /* ─────────────────── PROCESS (starts with Hagni's Ignite Program) ─────────────────── */
 const steps = [
+    { title: "Discovery & Requirement Analysis", desc: "Deep dive into your business objectives and technical landscape" },
+
   { title: "Hagni's Ignite Program & Skill Assessment", desc: "We begin by understanding your team's current capabilities and training needs" },
-  { title: "Discovery & Requirement Analysis", desc: "Deep dive into your business objectives and technical landscape" },
   { title: "Strategy & Architecture Planning", desc: "Blueprint the optimal solution architecture for your needs" },
   { title: "Design & Development", desc: "Craft and build using agile sprints with continuous feedback" },
   { title: "Testing & Quality Assurance", desc: "Rigorous testing to ensure reliability, security, and performance" },
@@ -361,10 +362,10 @@ const ProcessSection = () => (
 
 /* ─────────────────── METRICS ─────────────────── */
 const MetricsSection = () => {
-  const m1 = useCounter(120, 2000, "+");
+  const m1 = useCounter(80, 2000, "+");
   const m2 = useCounter(85, 2000, "+");
   const m3 = useCounter(97, 2000, "%");
-  const m4 = useCounter(50, 2000, "+");
+  const m4 = useCounter(25, 2000, "+");
   const metrics = [
     { ...m1, label: "Enterprise Projects Delivered" },
     { ...m2, label: "Happy Clients" },
@@ -398,11 +399,10 @@ const MetricsSection = () => {
   );
 };
 
-/* ─────────────────── TESTIMONIALS ─────────────────── */
 const testimonials = [
-  { text: "Hagni Technologies transformed the way we manage our operations. Their team delivered a robust enterprise platform that exceeded our expectations.", name: "Client A", role: "CTO, Enterprise Corp" },
-  { text: "Their cloud migration expertise saved us significant infrastructure costs while dramatically improving our system reliability.", name: "Client B", role: "VP Engineering, Tech Co" },
-  { text: "Working with Hagni Technologies felt like having an in-house tech team. The communication and delivery were outstanding.", name: "Client C", role: "Founder, StartUp Inc" },
+  { text: "Working with Hagni Technologies was seamless; they delivered our e-commerce platform ahead of schedule with a stunning, modern design. Our customers love the intuitive mobile experience and the lightning-fast checkout process, which has already boosted our sales.", name: "Flower school, Bengaluru", role: "Company Founder" },
+  { text: "Hagni Technologies transformed our vision into a professional online store that is both beautiful and incredibly easy for our customers to use.Their technical expertise and prompt communication made the entire development process stress-free and highly successfu.", name: "Redclay Cashue", role: "CEO" },
+  { text: "Hagni Technologies made complex AWS concepts incredibly easy to grasp through their hands-on labs and real-world project scenarios.I’ve come away with not just a certification, but a practical understanding of cloud architecture that has already opened up new career opportunities for me.", name: "S.Trisha", role: "B.Tech -CSE & AI (Vels University)" },
 ];
 
 const TestimonialsSection = () => (

@@ -46,7 +46,7 @@ const Footer = () => (
             {[
               { label: "Web & Mobile Development", to: "/services" },
               { label: "Cloud & DevOps", to: "/services" },
-              { label: "Hagni Ignite Learning", to: "/services" }
+              { label: "Hagni 's Ignite Learning", to: "/services" }
             ].map((l) => (
               <li key={l.label}>
                 <Link
