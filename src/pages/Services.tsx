@@ -457,7 +457,14 @@ const CourseCatalog = () => {
                       )}
                     </AnimatePresence>
                     {expandedCourse !== course.name && (
-                      <p className="text-xs text-muted-foreground">{course.topics.length} topics covered</p>
+                      <div className="flex items-center justify-between mt-3">
+                        <p className="text-xs text-muted-foreground">{course.topics.length} topics covered</p>
+                        <Link to="/contact" state={{ service: `${cat.title} — ${course.name}`, message: `I'm interested in the course: ${course.name}` }} className="ml-3">
+                          <Button size="sm" className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-9 px-4 text-xs shadow-md shadow-accent/20">
+                            Enroll
+                          </Button>
+                        </Link>
+                      </div>
                     )}
                   </motion.div>
                 ))}
@@ -497,7 +504,14 @@ const CourseCatalog = () => {
                     )}
                   </AnimatePresence>
                   {expandedCourse !== course.name && (
-                    <p className="text-xs text-muted-foreground">{course.topics.length} topics covered</p>
+                    <div className="flex items-center justify-between mt-3">
+                      <p className="text-xs text-muted-foreground">{course.topics.length} topics covered</p>
+                      <Link to="/contact" state={{ service: `${cat.title} — ${course.name}`, message: `I'm interested in the course: ${course.name}` }} className="ml-3">
+                        <Button size="sm" className="gradient-flame text-accent-foreground font-semibold border-0 gap-2 h-9 px-4 text-xs shadow-md shadow-accent/20">
+                          Enroll
+                        </Button>
+                      </Link>
+                    </div>
                   )}
                 </motion.div>
               ))}

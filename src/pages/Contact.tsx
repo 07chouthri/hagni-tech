@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Twitter, Youtube, Send } from "lucide-react";
@@ -23,6 +24,40 @@ const hearOptions = ["Google Search", "LinkedIn", "Referral", "Social Media", "O
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", service: "", message: "", hearAbout: "" });
+  const location = useLocation();
+  const formRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const state: any = (location as any).state;
+    const params = new URLSearchParams(location.search);
+    let updated = false;
+
+    if (state?.service) {
+      setForm((f) => ({ ...f, service: state.service }));
+      updated = true;
+    }
+    if (state?.message) {
+      setForm((f) => ({ ...f, message: state.message }));
+      updated = true;
+    }
+
+    const svc = params.get("service");
+    const msg = params.get("message");
+    if (svc) {
+      setForm((f) => ({ ...f, service: svc }));
+      updated = true;
+    }
+    if (msg) {
+      setForm((f) => ({ ...f, message: msg }));
+      updated = true;
+    }
+
+    if (updated) {
+      setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 150);
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,7 +97,7 @@ const Contact = () => {
             <div className="grid lg:grid-cols-5 gap-10 lg:gap-14">
               {/* Form */}
               <AnimatedSection className="lg:col-span-3">
-                <div className="card-professional p-8 lg:p-10">
+                <div ref={formRef} className="card-professional p-8 lg:p-10">
                   <h2 className="text-xl font-bold mb-1">Send Us Your Enquiry</h2>
                   <p className="text-sm text-muted-foreground mb-8">Fill out the form below and our team will get back to you promptly.</p>
                   <form onSubmit={handleSubmit} className="space-y-5">

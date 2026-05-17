@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingElements from "@/components/FloatingElements";
-import ImageShowcase from "@/components/ImageShowcase";
 import ParallaxImage from "@/components/ParallaxImage";
 import heroTechTeam from "@/assets/hero-visual.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
@@ -559,7 +558,6 @@ const Index = () => (
       <WhoWeAreSection />
       <CoreServicesSection />
       <WhyHagniSection />
-      <ImageShowcase />
       <ProcessSection />
       <MetricsSection />
       <TestimonialsSection />
